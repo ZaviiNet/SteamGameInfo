@@ -14,7 +14,10 @@ exports.handler = function( event, context ) {
 
             var json = JSON.parse( data );
             var text = 'Here's what I found about ';
-
+            var info = (json.detailed_description);
+            
+            text+=info+"Thank You";
+            output( text, context );
 
 
         } );
